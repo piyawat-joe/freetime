@@ -1,0 +1,20 @@
+.ft_product{
+    padding: 50px 20px;
+    height: 100%;
+    .ant-card-bordered{
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .doc-status {
+    margin-top: 20px;
+    padding: 10px 0;
+    border: 1px solid #ebecec;
+    border-width: 1px 0;
+    line-height: 36px;
+    }
+
+    #header-faq {
+        margin: 20px 0;
+    }
+}

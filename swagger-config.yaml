@@ -1,0 +1,5 @@
+---
+# url: "https://petstore.swagger.io/v2/swagger.json"
+url: "http://localhost:8081/v3/api-docs/"
+dom_id: "#swagger-ui"
+validatorUrl: "https://validator.swagger.io/validator"

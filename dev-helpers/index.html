@@ -1,0 +1,195 @@
+<!-- HTML for dev server -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xleven</title>
+  <link rel="stylesheet" type="text/css" href="http://localhost:3200/style-ui.css" >
+  <link rel="icon" type="image/png" href="http://localhost:3200/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="http://localhost:3200/favicon-16x16.png" sizes="16x16" />
+  <link rel="stylesheet" type="text/css" href="//g.alicdn.com/code/lib/antd/3.20.1/antd.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="//g.alicdn.com/code/lib/antd/4.1.5/antd.min.css" /> -->
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous"> -->
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body
+    {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+
+<script src=" https://f.alicdn.com/require.js/2.3.2/require.js"></script>
+<!-- <script src="https://g.alicdn.com/code/lib/react/16.8.6/umd/react.production.min.js"></script> -->
+<script>
+    require.config({
+        baseUrl: "//g.alicdn.com/xspace/xspace-lib/1.8.1/",
+        paths: {
+            "react": "https://g.alicdn.com/code/lib/react/16.8.6/umd/react.production.min",
+            "react-dom": "https://g.alicdn.com/code/lib/react-dom/16.8.6/umd/react-dom.production.min",
+            "react-router-dom": "https://unpkg.com/react-router-dom@5.1.2/umd/react-router-dom.min",
+            "redux":"redux/3.7.2/redux.min",
+            "react-redux": "react-redux/4.4.8/react-redux.min",
+            "prop-types": "prop-types/15.5.10/prop-types.min",
+            "@ali/mirrorz": "//g.alicdn.com/mirror-design/mirrorz/1.0.1/mirrorz-with-locales",
+            "@ali/mirror-editor-core": "//g.alicdn.com/mirror-design/mirror-editor/0.1.30/index",
+            "@ali/xform-core": "//g.alicdn.com/mirror-design/xform-core/0.2.0/index",
+            // "@ali/xform-antd":"//g.alicdn.com/xform/xform-antd/3.1.6/index",
+            "@ali/xform-antd":"http://localhost:8090/scripts/xform-antd3.1.6",
+            "history":"https://unpkg.com/history@4.10.1/umd/history.min",
+            "redux-thunk": "https://unpkg.com/redux-thunk@2.3.0/dist/redux-thunk.min",
+            "firebase-app":"https://www.gstatic.com/firebasejs/7.14.0/firebase-app",
+            "@ali/yodajs": "http://localhost:8090/scripts/yoda.min",
+            "timerange": "http://localhost:8090/scripts/timerange",
+            'classnames': "https://g.alicdn.com/xspace/xspace-lib/1.9.2/classnames/2.2.5/index",
+            "react-intl": "https://unpkg.com/react-intl@4.4.0/dist/react-intl.min",
+            "lodash": "https://g.alicdn.com/code/lib/lodash.js/4.17.0/lodash.min",
+            // "intl-redux": "http://localhost:8090/intl-redux",
+            // "keycloak-js": "https://cdn.jsdelivr.net/npm/keycloak-js@9.0.3/dist/keycloak.min",
+            // "js-sha256": "https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/src/sha256.min.js",
+            "base64-js": "https://unpkg.com/base64-js@1.3.0/base64js.min",
+            "antd": "//g.alicdn.com/code/lib/antd/4.6.2/antd-with-locales",
+            // "antd": "//g.alicdn.com/code/lib/antd/3.11.0/antd-with-locales",
+            "moment": "//g.alicdn.com/code/lib/moment.js/2.16.0/moment-with-locales.min",
+            "esprima":"https://cdn.jsdelivr.net/npm/esprima@4.0.1/dist/esprima.min",
+            // "Keycloak": "//localhost:8443/auth/js/keycloak"
+        },
+        map: {
+            "*": {
+                // "React": "react",
+                // "react-dom/server": "react-dom",
+                "ReactRedux": "react-redux",
+                "ReactRouter": "react-router",
+                "react-router-dom": "react-router-dom",
+                "ReduxThunk": "redux-thunk",
+                "ReactRouterRedux": "react-router-redux",
+                "Redux": "redux",
+                "history": "history",
+                "redux-thunk": "redux-thunk",
+                "Yoda": "@ali/yodajs",
+                "react-intl": "react-intl",
+                // "intl-redux": "intl-redux",
+                "antd":"antd",
+                // "Keycloak": "Keycloak"
+                "base64-js":"base64-js",
+                "esprima":"esprima"
+                // "js-sha256":"js-sha256"
+            }
+        }
+    });
+
+    require.config({
+      paths: {
+        // 'react-intl/locale-data/ca': xspaceLibPath + 'react-intl/2.2.3/locale-data/ca',
+        // 'react-intl/locale-data/cs': xspaceLibPath + 'react-intl/2.2.3/locale-data/cs',
+        // 'react-intl/locale-data/de': xspaceLibPath + 'react-intl/2.2.3/locale-data/de',
+        'react-intl/locale-data/en': '//g.alicdn.com/xspace/xspace-lib/1.9.2/react-intl/2.2.3/locale-data/en',
+        'react-intl/locale-data/th': '//g.alicdn.com/xspace/xspace-lib/1.9.2/react-intl/2.2.3/locale-data/th',
+        // 'react-intl/locale-data/es': xspaceLibPath + 'react-intl/2.2.3/locale-data/es',
+        // 'react-intl/locale-data/fr': xspaceLibPath + 'react-intl/2.2.3/locale-data/fr',
+        // 'react-intl/locale-data/ko': xspaceLibPath + 'react-intl/2.2.3/locale-data/ko',
+        // 'react-intl/locale-data/nl': xspaceLibPath + 'react-intl/2.2.3/locale-data/nl',
+        // 'react-intl/locale-data/pt': xspaceLibPath + 'react-intl/2.2.3/locale-data/pt',
+        // 'react-intl/locale-data/ru': xspaceLibPath + 'react-intl/2.2.3/locale-data/ru',
+        'react-intl/locale-data/zh': '//g.alicdn.com/xspace/xspace-lib/1.9.2/react-intl/2.2.3/locale-data/zh'
+      }
+    });
+
+</script>
+</head>
+
+<body>
+  <div id="freetime-ui"></div>
+
+  <!-- <script src="./swagger-ui-bundle.js"> </script> -->
+ <!-- <script src="./swagger-ui-standalone-preset.js"> </script> -->
+
+ <script>
+    require(['http://localhost:3200/ui-bundle.js' ,'http://localhost:3200/freetime.js' ,'http://localhost:3200/product.js', 'http://localhost:3200/cart.js'], function (swaggerBundle ,freetimePreset, productPreset, cartPreset) {
+      window["SwaggerUIBundle"] = swaggerBundle
+      window["freetimePreset"] = freetimePreset
+      window["productPreset"] = productPreset
+      window["cartPreset"] = cartPreset
+      // Build a system
+      const ui = SwaggerUIBundle({
+        // url: "https://petstore.swagger.io/v2/swagger.json",
+        // url: "http://localhost:8081/v3/api-docs/",
+        dom_id: '#freetime-ui',
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          freetimePreset,
+          productPreset,
+          cartPreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "FreetimeLayout"
+      })
+
+      window.ui = ui
+
+      ui.initOAuth({
+        clientId: "freetimehero",
+        clientSecret: "5d09ba08-78c0-4ee9-b586-ec6782b3df8f",
+        realm: "freetimehero",
+        appName: "freetimehero",
+        scopeSeparator: " ",
+        additionalQueryStringParams: {},
+        usePkceWithAuthorizationCodeGrant: false
+      })
+    });
+  </script> 
+
+  <!-- <script>
+    window.onload = function() {
+      window["SwaggerUIBundle"] = window["swagger-ui-bundle"]
+      window["SwaggerUIStandalonePreset"] = window["swagger-ui-standalone-preset"]
+      // Build a system
+      const ui = SwaggerUIBundle({
+        url: "https://petstore.swagger.io/v2/swagger.json",
+        // url: "http://localhost:8081/v3/api-docs/",
+        dom_id: '#swagger-ui',
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout"
+      })
+
+      window.ui = ui
+
+      ui.initOAuth({
+        clientId: "your-client-id",
+        clientSecret: "your-client-secret-if-required",
+        realm: "your-realms",
+        appName: "your-app-name",
+        scopeSeparator: " ",
+        additionalQueryStringParams: {},
+        usePkceWithAuthorizationCodeGrant: false
+      })
+    }
+  </script> -->
+
+</body>
+
+</html>
