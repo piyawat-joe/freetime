@@ -56,7 +56,7 @@
     "@braintree/sanitize-url": "^4.0.0",
     "@kyleshockey/object-assign-deep": "^0.4.2",
     "@kyleshockey/xml": "^1.0.2",
-    "core-js": "^2.5.1",
+    "core-js": "^2.6.12",
     "css.escape": "1.5.1",
     "deep-extend": "0.6.0",
     "dompurify": "^2.0.7",
